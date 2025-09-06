@@ -5,77 +5,98 @@
   <title>Xingtong Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Reset some default styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #f5f5f5;
       color: #333333;
       line-height: 1.6;
     }
-    header {
-      background-color: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #6c7c5e;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #333333;
-    }
+
+    /* Fixed navigation bar */
     nav {
-      text-align: center;
-      margin: 20px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       color: #6c7c5e;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #f4a261;
     }
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
+
+    /* Header section */
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      text-align: center;
+      padding: 0 20px;
       background-color: #ffffff;
-      border-radius: 15px;
-      margin-bottom: 30px;
+      margin-top: 60px; /* to offset fixed nav */
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      color: #6c7c5e;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555555;
+      max-width: 600px;
+    }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
     section h2 {
-      color: #6c7c5e;
       font-size: 2em;
-      margin-bottom: 15px;
+      color: #6c7c5e;
       text-align: center;
+      margin-bottom: 15px;
     }
     section p {
-      font-size: 1.1em;
-      line-height: 1.6em;
       text-align: center;
+      font-size: 1.1em;
     }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      background-color: #ffffff;
-      color: #333333;
+      color: #777777;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Hi, I’m Xingtong Chen 👋</h1>
-  <p>7th grader exploring Art, STEM, and Creative Writing</p>
-</header>
 
 <nav>
   <a href="#art">Art</a>
@@ -83,23 +104,32 @@
   <a href="#writing">Creative Writing</a>
 </nav>
 
+<header>
+  <h1>Xingtong Chen</h1>
+  <p>7th grader exploring Art, STEM projects, and Creative Writing.  
+  A personal portfolio to showcase creations and projects.</p>
+</header>
+
 <section id="art">
   <h2>🎨 Art</h2>
-  <p>Fast and detailed drawing, sculpture, and visual design. I love experimenting with shapes, colors, and textures.</p>
+  <p>Fast and detailed drawing, sculpture, and visual design.  
+  Placeholder for artwork images or galleries.</p>
 </section>
 
 <section id="stem">
   <h2>🔬 STEM Projects</h2>
-  <p>Creating fun and educational STEM videos. Combining creativity with science to help others learn.</p>
+  <p>Educational STEM videos and experiments.  
+  Placeholder for videos, project summaries, or interactive demos.</p>
 </section>
 
 <section id="writing">
   <h2>✍️ Creative Writing</h2>
-  <p>Short stories, reflections, and ideas expressed in English. I enjoy sharing thoughts and making words come alive.</p>
+  <p>Short stories, reflections, and ideas expressed in English.  
+  Placeholder for writing samples or blog-style posts.</p>
 </section>
 
 <footer>
-  &copy; 2025 Xingtong Chen — My personal website
+  &copy; 2025 Xingtong Chen — My personal portfolio
 </footer>
 
 </body>
