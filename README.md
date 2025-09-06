@@ -1,3 +1,3 @@
-# xingtong.github.io
+# xingtong-chen.github.io
 Xingtong's personal website
 hi, i'm Xingtong Chen!
