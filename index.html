@@ -1,33 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Xingtong Chen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f6d365, #fda085);
       color: #333;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 50px 20px;
       text-align: center;
-      padding: 50px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    h1 {
+    header h1 {
+      margin: 0;
       font-size: 3em;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      color: #ff6f61;
     }
-    p {
+    header p {
       font-size: 1.2em;
-      background: rgba(255,255,255,0.8);
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
+      margin-top: 10px;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,0.85);
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #ff6f61;
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff6f61;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: rgba(255,255,255,0.9);
     }
   </style>
 </head>
 <body>
-  <h1>Hi, I’m Xingtong ✨</h1>
-  <p>Welcome to my personal site. I love art, STEM, and creative projects!</p>
+
+<header>
+  <h1>Hi, I’m Xingtong Chen 👋</h1>
+  <p>7th grader exploring Art, STEM, and Creative Writing</p>
+</header>
+
+<nav>
+  <a href="#art">Art</a>
+  <a href="#stem">STEM Projects</a>
+  <a href="#writing">Creative Writing</a>
+</nav>
+
+<section id="art">
+  <h2>🎨 Art</h2>
+  <p>Fast and detailed drawing, sculpture, and visual design.  
+  I love experimenting with shapes, colors, and textures.</p>
+</section>
+
+<section id="stem">
+  <h2>🔬 STEM Projects</h2>
+  <p>Creating fun and educational STEM videos.  
+  Combining creativity with science to help others learn.</p>
+</section>
+
+<section id="writing">
+  <h2>✍️ Creative Writing</h2>
+  <p>Short stories, reflections, and ideas expressed in English.  
+  I enjoy sharing thoughts and making words come alive.</p>
+</section>
+
+<footer>
+  &copy; 2025 Xingtong Chen — My personal website
+</footer>
+
 </body>
 </html>
-
