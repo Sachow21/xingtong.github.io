@@ -5,7 +5,6 @@
   <title>Xingtong Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset some default styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -34,9 +33,7 @@
       font-weight: bold;
       transition: color 0.3s;
     }
-    nav a:hover {
-      color: #f4a261;
-    }
+    nav a:hover { color: #f4a261; }
 
     /* Header section */
     header {
@@ -48,18 +45,14 @@
       text-align: center;
       padding: 0 20px;
       background-color: #ffffff;
-      margin-top: 60px; /* to offset fixed nav */
+      margin-top: 60px;
     }
     header h1 {
       font-size: 3em;
       margin-bottom: 15px;
       color: #6c7c5e;
     }
-    header p {
-      font-size: 1.2em;
-      color: #555555;
-      max-width: 600px;
-    }
+    header p { font-size: 1.2em; color: #555555; max-width: 600px; }
 
     /* Sections */
     section {
@@ -81,9 +74,26 @@
       text-align: center;
       margin-bottom: 15px;
     }
-    section p {
-      text-align: center;
-      font-size: 1.1em;
+    section p { text-align: center; font-size: 1.1em; }
+
+    /* Image gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     /* Footer */
@@ -112,20 +122,32 @@
 
 <section id="art">
   <h2>🎨 Art</h2>
-  <p>Fast and detailed drawing, sculpture, and visual design.  
-  Placeholder for artwork images or galleries.</p>
+  <p>Fast and detailed drawing, sculpture, and visual design.</p>
+  <div class="gallery">
+    <img src="images/art1.png" alt="Art 1">
+    <img src="images/art2.png" alt="Art 2">
+    <img src="images/art3.png" alt="Art 3">
+  </div>
 </section>
 
 <section id="stem">
   <h2>🔬 STEM Projects</h2>
-  <p>Educational STEM videos and experiments.  
-  Placeholder for videos, project summaries, or interactive demos.</p>
+  <p>Educational STEM videos and experiments.</p>
+  <div class="gallery">
+    <img src="images/stem1.png" alt="STEM 1">
+    <img src="images/stem2.png" alt="STEM 2">
+    <img src="images/stem3.png" alt="STEM 3">
+  </div>
 </section>
 
 <section id="writing">
   <h2>✍️ Creative Writing</h2>
-  <p>Short stories, reflections, and ideas expressed in English.  
-  Placeholder for writing samples or blog-style posts.</p>
+  <p>Short stories, reflections, and ideas expressed in English.</p>
+  <div class="gallery">
+    <img src="images/writing1.png" alt="Writing 1">
+    <img src="images/writing2.png" alt="Writing 2">
+    <img src="images/writing3.png" alt="Writing 3">
+  </div>
 </section>
 
 <footer>
