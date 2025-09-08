@@ -1,38 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xingtong Chen</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xingtong Chen | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f7fa; /* Lighter background color */
+            color: #2c2a2f; /* Darker text for readability */
+        }
+        
+        /* The dark background image and its overlay have been removed for a clean, light theme. */
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Styles for section transitions */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Active state for navigation links with a soft violet accent */
+        .nav-link {
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffffff;
+        }
+        .nav-link.active {
+            color: #111; /* Darker text for active link */
+            border-bottom-color: #8a63d2; /* A nice violet accent */
+        }
+        
+        /* Styling for the project grid items */
+        .project-item .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-item:hover .overlay {
+            opacity: 1;
+        }
+        
+        .project-item img {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Xingtong Chen</h1>
-    <p>Student · Creator · Explorer</p>
-    <link rel="stylesheet" href="style.css">
-  </header>
+<body class="antialiased">
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>I’m passionate about learning, creating, and sharing ideas. This site is a simple portfolio of my projects and interests.</p>
-    </section>
+    <!-- The background-container div has been removed. -->
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="#">Project One</a></li>
-        <li><a href="#">Project Two</a></li>
-        <li><a href="#">Project Three</a></li>
-      </ul>
-    </section>
+    <div class="relative min-h-screen flex flex-col">
+        <header class="py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">Xingtong Chen</h1>
+                <p class="mt-2 text-lg text-gray-600">Young Artist & Creator</p>
+            </div>
+            <nav class="mt-8">
+                <ul class="flex justify-center space-x-6 sm:space-x-8 text-sm font-medium tracking-wider uppercase text-gray-500">
+                    <li><a href="#work" class="nav-link hover:text-gray-900">Work</a></li>
+                    <li><a href="#about" class="nav-link hover:text-gray-900">About</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-gray-900">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
-    </section>
-  </main>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Work Section -->
+            <section id="work" class="page-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/1e392a/f0f0f0?text=Drawings" alt="Drawings" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">Drawings</h3>
+                        </div>
+                    </a>
+                    <!-- Project 2 -->
+                    <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/2a4c3a/f0f0f0?text=Sculptures" alt="Sculptures" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">Sculptures</h3>
+                        </div>
+                    </a>
+                    <!-- Project 3 -->
+                    <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/355f4a/f0f0f0?text=Stories" alt="Creative writings" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">Creative writings</h3>
+                        </div>
+                    </a>
+                    <!-- Project 4 -->
+                     <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/40735a/f0f0f0?text=Crafts" alt="DIY Crafts" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">DIY Crafts</h3>
+                        </div>
+                    </a>
+                     <!-- Project 5 -->
+                     <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/4b866a/f0f0f0?text=STEM+Projects" alt="STEM Projects" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">STEM Projects</h3>
+                        </div>
+                    </a>
+                     <!-- Project 6 -->
+                     <a href="#" class="group project-item block relative overflow-hidden rounded-lg">
+                        <img src="https://placehold.co/600x400/569a7a/f0f0f0?text=Creations" alt="Creations" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+                            <h3 class="text-white text-xl font-semibold">Creations</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="page-section">
+                <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/f0f0f0/333333?text=Xingtong" alt="Portrait of Xingtong" class="rounded-full w-48 h-48 md:w-full md:h-auto object-cover mx-auto">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4">Welcome to my world!</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            I'm Xingtong, a 12-year-old creator who loves to bring ideas to life. Whether I'm sketching in my notebook, building a sculpture, writing a new adventure, crafting something by hand, or experimenting with a STEM project, I'm always making something new. This is a place where I share my favorite creations. Thanks for stopping by!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="page-section">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        I love collaborating and sharing ideas. For any inquiries, please have a parent or guardian reach out.
+                    </p>
+                    <a href="mailto:contact.xingtong.art@example.com" class="inline-block bg-violet-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-violet-600 transition-colors duration-300">
+                        Contact Email
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="py-6 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                &copy; 2025 Xingtong Chen. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.page-section');
+            
+            function showSection(targetId) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            }
+
+            function updateActiveLink(targetId) {
+                 navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${targetId}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Set initial state based on hash or default to 'work'
+            const initialHash = window.location.hash.substring(1) || 'work';
+            showSection(initialHash);
+            updateActiveLink(initialHash);
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    showSection(targetId);
+                    updateActiveLink(targetId);
+                    // Update URL hash for better navigation history
+                    history.pushState(null, null, `#${targetId}`);
+                });
+            });
+
+            // Handle back/forward browser navigation
+            window.addEventListener('popstate', function() {
+                const targetId = window.location.hash.substring(1) || 'work';
+                showSection(targetId);
+                updateActiveLink(targetId);
+            });
+        });
+    </script>
 </body>
 </html>
+
+
+
